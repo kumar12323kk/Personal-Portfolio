@@ -1,0 +1,341 @@
+:root{
+    --text-color: black;
+    --link-color: #000000;
+    --background-color: white;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <400>;
+    font-style: normal;
+    background-color: var(--background-color);
+  }
+
+  a{
+     color: var(--link-color);
+     text-decoration: none;
+  }
+
+  /*Navbar*/
+  nav{
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 50px;
+      height: 80px;
+      align-items: center;
+  }
+
+  nav .left{
+      color: var(--text-color);
+      font-size: 25px;
+      font-weight: 600;
+  }
+
+nav .right{
+    color: var(--text-color);
+    margin: 0px 10px;
+    
+    
+}
+
+nav .right a:last-child{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    padding: 5px 15px;
+    box-shadow: darkgray 5px 5px;
+    border-radius: 5px;
+}
+
+nav .right a span{
+    margin-left: 5px;
+}
+
+/* SECTION1: HERO */
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    margin: 50px 0px;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.hero-section .text{
+    flex: 5;
+}
+.hero-section .text h2{
+    font-size: 45px;
+}
+.hero-section .text .links{
+    margin-top: 25px;
+}
+
+.hero-section .text .links a{
+    display: inline-block;
+    padding:  5px 10px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+.hero-section .text .links a:hover{
+    transform: scale(1.2);
+    transition: .5s;
+    
+}
+
+
+.hero-section .photo{
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.hero-section .photo img{
+    width: 250px;
+    border-radius: 50%;
+}
+
+/*SECTION2: Qualifications*/
+
+.qualifications-section {
+    padding: 0px 50px;
+    margin: 50px 0px 100px 0px;
+}
+
+.qualifications-section h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.qualification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.qualification-card {
+    display: flex;
+    align-items: flex-start;
+    background-color: #f8f8f8;
+    border-left: 5px solid #4e4e4e;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.qualification-card:hover {
+    transform: translateY(-5px);
+}
+
+.qualification-card i {
+    font-size: 28px;
+    margin-right: 20px;
+    color: #333;
+    min-width: 35px;
+}
+
+.qualification-card h3 {
+    margin: 0 0 5px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+}
+
+.qualification-card p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .qualifications-section {
+        padding: 0px 20px;
+    }
+
+    .qualification-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .qualification-card i {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+/*SECTION3: Skills*/
+.skill-section{
+    padding: 0px 50px;
+    margin: 50px 0px 100px 0px;
+}
+
+.skill-section h2{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.skill-section .text p{
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.skill-section .cells{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-section .cell{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    padding: 15px;
+    margin: 15px;
+    border: 2px solid #aaa;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.skill-section .cells .cell img{
+    width: 40px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+}
+
+.skill-section .cells .cell span{
+    font-size: 16px;
+    text-align: center;
+    
+}
+
+.skill-section .cells .cell:hover{
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+/*  SECTION:4   CONTACT*/
+
+.contact-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: 2px solid #ccc;
+}
+
+.contact-section h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.contact-section p {
+    font-size: 18px;
+    color: #444;
+    margin: 10px 0;
+}
+
+.contact-section i {
+    margin-right: 8px;
+    color: #000;
+}
+
+.contact-section a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.contact-section a:hover {
+    color: #555;
+}
+@media (max-width: 850px){
+    /*SECTION1: HERO*/
+    .hero-section .text h2{
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 700px){
+    /*SECTION1: HERO*/
+    .hero-section{
+        flex-direction: column-reverse;
+    }
+    .hero-section .photo img{
+        width: 200px;
+    }
+    .hero-section .text h2{
+        font-size: 28px;
+    }
+
+}
+@media (max-width: 600px){
+    /* Navbar */
+    nav{
+        padding: 0px 20px;
+    }
+    nav .right a{
+        font-size: 22px;
+    }
+    nav .right a:last-child{
+        color: black;
+        background: transparent;
+        padding: 0px;
+    }
+    nav .right a span{
+        display: none;
+    }
+    /*SECTION1: HERO*/
+    .hero-section{
+        padding: 0px 20px;
+    }
+    .hero-section .text h2{
+        font-size: 28px;
+    }
+    .skill-section h2{
+        font-size: 28px;
+    }
+    
+    .skill-section .text{
+        font-size: 18px;
+    }
+    .skill-section .cell{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 65px;
+        padding: 5px 10px;
+        margin: 10px;
+        border: 2.5px solid rgb(107, 107, 107);
+        border-radius: 10px;
+    }
+}
+
+
+}
