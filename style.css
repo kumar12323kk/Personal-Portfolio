@@ -218,6 +218,8 @@ nav .right a span{
     border-radius: 12px;
     transition: all 0.3s ease;
     background-color: #f9f9f9;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 .skill-section .cells .cell img{
@@ -325,17 +327,17 @@ nav .right a span{
         font-size: 18px;
     }
     .skill-section .cell{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 65px;
-        padding: 5px 10px;
-        margin: 10px;
-        border: 2.5px solid rgb(107, 107, 107);
-        border-radius: 10px;
-        text-align: center;
-        word-wrap: break-word;
+        .skill-section .cell {
+            width: 100px; /* Adjust width for mobile */
+            min-width: 60px; /* Ensure a minimum width */
+            padding: 10px;  /* Adjust padding for mobile */
+            flex-direction: column;  /* Ensure items are stacked vertically */
+            align-items: center;  /* Align items centrally */
+        }
+    
+        .skill-section .cell span {
+            font-size: 12px;  /* Adjust font size for better readability on mobile */
+        }
         
     }
     .skill-section .cell span{
